@@ -1,3 +1,6 @@
-config/prod.json
+__pycache__/
 venv/
 .idea/
+config/prod.json
+orders.log
+chromedriver
