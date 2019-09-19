@@ -1,0 +1,3 @@
+config/prod.json
+venv/
+.idea/

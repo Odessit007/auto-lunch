@@ -1,0 +1,18 @@
+2019-09-18 16:29:11,468 :: INFO :: START
+2019-09-18 16:29:11,468 :: INFO :: 	Trying to run get_orders, 1-th try
+2019-09-18 16:29:11,468 :: INFO :: Making order for Thursday
+2019-09-18 16:29:12,094 :: WARNING :: Bad sum for Игорь Вустянюк: sum_field = 56.00
+2019-09-18 16:29:12,095 :: WARNING :: Bad sum for Олег Зоренко: sum_field = 59.00
+2019-09-18 16:29:12,095 :: WARNING :: Bad sum for Настя Головенко: sum_field = 35.00
+2019-09-18 16:29:12,095 :: WARNING :: Bad sum for Катя Дубинина: sum_field = 75.00
+2019-09-18 16:29:12,095 :: INFO :: Empty order for Олег Иващенко. Skipping
+2019-09-18 16:29:12,095 :: WARNING :: Bad sum for Андрей Кобылин: sum_field = 70.00
+2019-09-18 16:29:12,095 :: INFO :: 	1-th run succeeded for get_orders
+2019-09-18 16:29:14,008 :: INFO :: 	Trying to run make_order, 1-th try
+2019-09-18 16:29:15,176 :: WARNING :: true_sum = 56 not equal to reported_sum = 0 for Игорь Вустянюк
+2019-09-18 16:29:15,176 :: WARNING :: true_sum = 59 not equal to reported_sum = 0 for Олег Зоренко
+2019-09-18 16:29:15,176 :: WARNING :: true_sum = 35 not equal to reported_sum = 0 for Настя Головенко
+2019-09-18 16:29:15,176 :: WARNING :: true_sum = 75 not equal to reported_sum = 0 for Катя Дубинина
+2019-09-18 16:29:15,176 :: WARNING :: true_sum = 70 not equal to reported_sum = 0 for Андрей Кобылин
+2019-09-18 16:29:17,653 :: WARNING :: final_sum = 295 not equal to total_sum = 0
+2019-09-18 16:29:27,842 :: INFO :: 	1-th run succeeded for make_order
