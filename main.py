@@ -64,9 +64,10 @@ def make_order(driver, order, inverse_order, reported_sums, total_sum):
         return
 
     # Confirming order
+    time.sleep(10)
     if config == 'prod':
         driver.find_element_by_xpath('//*[@id="midmid"]/form/div/input[2]').click()
-    time.sleep(10)
+    time.sleep(3)
 
 
 def _check_sums(inverse_order, reported_sums, prices):
@@ -156,7 +157,6 @@ def main():
     # if config == 'prod':
     #     options = Options()
     #     options.headless = True
-
     with webdriver.Chrome(executable_path=os.path.abspath('./chromedriver'), chrome_options=options) as driver:
         driver.set_page_load_timeout(3)
         driver.get(f'http://obed.in.ua/menu/{tomorrow_name}/index.php')

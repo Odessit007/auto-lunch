@@ -17,6 +17,10 @@ The order is filled via Google Spreadsheet in the following table:
 * `Total` column is used to track minimal order sum (some catering services have such limitations);
 * `COL_SUM`s can be used in such scenario: each week a certain persion is responsible for payments and at the end of the week it's easy to see each person's "debt".
 
+
 # Development
 
-Current version assumes that spreadsheet has public link and that `chromedriver` drive is executable (`chmod +x`).
+Current version assumes that
+* spreadsheet has public link
+* `chromedriver` drive is executable (`chmod +x`)
+* Chrome is installed and has the same version as `chromedriver`
