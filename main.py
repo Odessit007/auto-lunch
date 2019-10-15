@@ -64,10 +64,10 @@ def make_order(driver, order, inverse_order, reported_sums, total_sum):
         return
 
     # Confirming order
-    time.sleep(10)
+    time.sleep(5)
     if config == 'prod':
         driver.find_element_by_xpath('//*[@id="midmid"]/form/div/input[2]').click()
-    time.sleep(3)
+        time.sleep(3)
 
 
 def _check_sums(inverse_order, reported_sums, prices):
