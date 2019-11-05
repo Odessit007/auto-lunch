@@ -67,6 +67,7 @@ def make_order(driver, order, inverse_order, reported_sums, total_sum):
     time.sleep(5)
     if config == 'prod':
         driver.find_element_by_xpath('//*[@id="midmid"]/form/div/input[2]').click()
+        logging.info('ORDER IS MADE !!!')
         time.sleep(3)
 
 
@@ -85,13 +86,11 @@ def _check_sums(inverse_order, reported_sums, prices):
 @retry(n_tries=5, time_delta=60, exceptions=requests.exceptions.RequestException)
 def get_orders(tomorrow_num):
     logging.info(f'Making order for {WEEKDAYS_EN[tomorrow_num]}')
-
     try:
         r = requests.get(SPREADSHEET_URL)
     except requests.exceptions.RequestException as e:
         logging.error(f'Request exception happened: {e}')
         raise
-
     r.encoding = 'utf-8'
     data = r.text
     lines = [line.strip() for line in data.split('\n')]
@@ -115,7 +114,7 @@ def _extract_order(names_line, order_line):
     reported_sums = dict()
     total_sum = 0
     for i in range(2, len(order_line), 2):
-        name = names_line[i].strip()
+        name = names_line[i-1].strip()
         if not order_line[i]:
             logging.info(f'Empty order for {name}. Skipping')
             continue
